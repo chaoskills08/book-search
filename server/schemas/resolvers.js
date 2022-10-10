@@ -7,7 +7,6 @@ Query: {
     await User.findOne({ email: args.email })
   },
 
-  // Uses the ID stored in context to find logged-in user
   me: async (_, context) => {
     if (context.user) {
       return User.findOne({ _id: context.user._id }).select("-__v -password");
