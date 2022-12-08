@@ -5,12 +5,12 @@ const typeDefs = gql`
     # Define what can be queried for Books
     type Books {
         _id: ID
-        title: String
         authors: String
         description: String
         bookId: String
         image: String
         link: String
+        title: String
     }
 
     # Define what can be queried for User
@@ -18,7 +18,7 @@ const typeDefs = gql`
         username: String
         email: String
         password: String
-        savedBooks: [Books]
+        savedBooks: bookSchema
     }
 
     # Query books/users
